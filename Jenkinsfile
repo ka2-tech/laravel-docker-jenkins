@@ -25,6 +25,7 @@ pipeline {
         stage('Push') {
             steps {
                 sh 'docker push khraiteka/laravel-jenkins-docker:$BUILD_NUMBER'
+                echo 'Push Image Completed' 
             }
         }
     }
