@@ -29,4 +29,23 @@ pipeline {
             }
         }
     }
+    post {
+        failure {
+              mail to: 'khaitkdev@gmail.com',
+                subject: "FAILED: Build ${env.JOB_NAME}", 
+                body: "Build failed ${env.JOB_NAME} build no: ${env.BUILD_NUMBER}.\n\nView the log at:\n ${env.BUILD_URL}\n\nURL:\n${env.RUN_DISPLAY_URL}"
+        }
+    
+    success{
+            mail to: 'khaitkdev@gmail.com',
+                subject: "SUCCESSFUL: Build ${env.JOB_NAME}", 
+                body: "Build Successful ${env.JOB_NAME} build no: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nURL:\n${env.RUN_DISPLAY_URL}"
+        }
+        
+        aborted{
+            mail to: 'khaitkdev@gmail.com',
+                subject: "ABORTED: Build ${env.JOB_NAME}", 
+                body: "Build was aborted ${env.JOB_NAME} build no: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nURL:\n${env.RUN_DISPLAY_URL}"
+        }
+    }
 }
