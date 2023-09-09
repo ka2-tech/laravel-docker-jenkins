@@ -1,3 +1,1 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-
+![image](https://github.com/khaitk/laravel-docker-jenkins/assets/66162813/a19f6c7b-6bee-4905-994c-9d99da21144d)
